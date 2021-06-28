@@ -2,6 +2,7 @@ const express = require('express');
 const request = require('request');
 const path = require("path");
 const { urlencoded } = require('express');
+const config = require('./config.js');
 
 const app = express();
 
@@ -22,9 +23,10 @@ app.post('/', (req, res) => {
 
     let city = req.body.city;
     console.log(city);
+    // console.log(config.api);
     var request = require('request');
     request(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=679ca9b9d79a1e404cc1cd756e5c4aec&units=metric`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${config.api}&units=metric`,
         function (error, response, body) {
             let data = JSON.parse(body);
             if (response.statusCode === 200) {
