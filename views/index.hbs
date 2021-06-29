@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ultimate Weather</title>
 </head>
 <link rel="stylesheet" href="./style.css">
+<script defer src="./script.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+
 
 <body>
 
@@ -18,15 +23,26 @@
     <div class="entry">
         <h1>Ultimate Weather</h1>
         <form action="/" method="POST" id="form">
-            <input type="text" name="city" id="city">
+            <input type="text" name="city" id="city" placeholder="City Name....">
             <button type="submit" class="searchbtn">Search</button>
         </form>
     </div>
 
     <div class="container">
-        <div class="data">
-
+        <div class="weathercon" id="weathercon">
+            <i class="fas fa-minus icon" style="color: #080705;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-minus icon" style="color: #080705;"></i>
         </div>
+        <div class="data">
+            <div class="leftsection">
+                <div class="temp" id="temp">{{temp}}&deg;c</div>
+                <div class="detail" id="detail">{{weather}}</div>
+                <div class="cname">{{city}}</div>
+            </div><div class="rightsection">
+                <div id="currentdate"> --- ---</div>
+        </div>
+</div>
+    <div class="credit">
+        Design & Developed By Parth Gandhi
     </div>
 
 
